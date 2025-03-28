@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="./output.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body x-data="{menu: 'inicio'}" class="m-4 bg-gray-900 transition duration-100">
+    <header class="">
+        <!-- Menu -->
+        <nav class="flex justify-between items-center bg-white p-4 rounded-lg">
+          <div class="flex items-center gap-2">
+            <img class="w-8" src="img/wired-lineal-680-it-developer-hover-pinch.gif" alt="">
+            <p class="font-bold">Desarrollador Wed</p>
+          </div>
+          <div class="xl:flex items-center gap-10 hidden">
+            <button @click="menu = 'inicio'" class="font-bold cursor-pointer ">Inicio</button>
+            <button @click="menu = 'proyectos'" class="font-bold cursor-pointer">Projectos</button>
+          </div>
+          <div class="xl:flex gap-10 hidden">
+            <img id="dark" class="p-1 bg-black cursor-pointer rounded-2xl" src="img/moon.svg" alt="">
+            <a href="https://github.com/angel03042" class="flex items-center gap-2"> 
+              <img src="img/github.png" alt="">
+              <p>Git hub</p>
+            </a>
+            <img class="w-8 cursor-pointer" src="img/perfil (1).svg" alt="">
+          </div>
+          <!-- Menu Responsive -->
+          <details id="menu" class="xl:hidden">
+            <summary class="list-none"><img class="cursor-pointer" src="img/logs.svg" alt=""></summary>
+            <div class="flex flex-col gap-4 fixed right-10 bg-gray-900 text-white w-1/2 p-4 rounded-2xl">
+              <p @click="menu = 'inicio'">Inicio</p>
+              <p @click="menu = 'proyectos'">Projectos</p>
+              <a href="https://github.com/angel03042">Git Hub</a>
+              <hr>
+              <div class="flex justify-between items-center">
+                <div class="flex items-center bg-amber-50 gap-4 rounded-2xl">
+                  <img id="dark" class="p-1 bg-black cursor-pointer rounded-2xl" src="img/moon.svg" alt="">
+                </div>
+                <img class="cursor-pointer w-8" src="img/perfil (1).svg" alt="">
+              </div>
+            </div>
+          </details>
+        </nav>
+    </header>
+    <section x-show="menu === 'inicio'" class="my-4 grid grid-cols-1 xl:grid xl:grid-cols-3 xl:grid-rows-2 h-[calc(100vh-120px)] gap-6 xl:overflow-hidden">
+        <article class="flex flex-col justify-between xl:col-span-2 bg-white rounded-lg p-6">
+          <div>
+            <h1 class="font-bold text-[calc(1rem+2vw)] md:text-4xl">Angel Francisco Benitez Ramirez</h1>
+            <p class="my-4 text-[calc(.5rem+1vw)] md:text-[calc(.2rem+1vw)]">Soy un joven apasionado por la programación web, siempre en búsqueda de nuevos conocimientos y desafíos que me permitan crecer tanto personal como profesionalmente. Me encanta explorar diferentes tecnologías y aplicar lo aprendido en proyectos reales, desarrollando soluciones eficientes y bien estructuradas.</p>
+          </div>
+          <div class="flex gap-4">
+            <a href="https://www.canva.com/design/DAGT-5IhuQM/xoGDDZ7GcgSMk0WwBU8W3g/view?utm_content=DAGT-5IhuQM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4d2da11785" class="bg-black text-white px-8 py-2 rounded-lg cursor-pointer">CV</a>
+            <a href="" class="border-2 border-black bg-transparent px-8 py-2 rounded-lg cursor-pointer">Contactar</a>
+          </div>
+        </article>
+        <!-- Lenguajes que domino -->
+        <article class="xl:col-start-3 xl:col-end-4 xl:row-span-2 bg-white rounded-lg p-6 xl:overflow-auto">
+          <h1 class="font-bold text-4xl">Tecnologias</h1>
+          <!-- Contenedor -->
+          <div class="my-4 flex flex-col gap-2">
+            <!-- Javascript -->
+            <div class="flex border-black border-2 p-2 gap-2 rounded-lg">
+              <img class="w-10" src="img/javascript (1).svg" alt="">
+              <div>
+                <p class="font-bold text-[14px]">JavaScript</p>
+                <p class="text-[12px]">Manejo de variables, funciones, objetos y Fetch API para consumir datos.</p>
+              </div>
+            </div>
+            <!-- Tailwind -->
+            <div class="flex border-black border-2 p-2 gap-2 rounded-lg">
+              <img class="w-10" src="img/tailwindcss (1).svg" alt="">
+              <div>
+                <p class="font-bold text-[14px]">Tailwind</p>
+                <p class="text-[12px]">Estilización rápida con clases utilitarias para diseño responsivo.</p>
+              </div>
+            </div>
+            <!-- Figma -->
+            <div class="flex border-black border-2 p-2 gap-2 rounded-lg">
+              <img class="w-10" src="img/figma (1).svg" alt="">
+              <div>
+                <p class="font-bold text-[14px]">Figma</p>
+                <p class="text-[12px]">Creación de diseños y prototipos para interfaces de usuario.</p>
+              </div>
+            </div>
+            <!-- Git -->
+            <div class="flex border-black border-2 p-2 gap-2 rounded-lg">
+              <img class="w-10" src="img/git.svg" alt="">
+              <div>
+                <p class="font-bold text-[14px]">Git</p>
+                <p class="text-[12px]">Control de versiones y colaboración en proyectos con GitHub.</p>
+              </div>
+            </div>
+            <!-- Python -->
+            <div class="flex border-black border-2 p-2 gap-2 rounded-lg">
+              <img class="w-10" src="img/python (1).svg" alt="">
+              <div>
+                <p class="font-bold text-[14px]">Python</p>
+                <p class="text-[12px]">Uso básico para scripts y automatización de tareas.</p>
+              </div>
+            </div>
+            <!-- Html -->
+            <div class="flex border-black border-2 p-2 gap-2 rounded-lg">
+              <img class="w-10" src="img/html5 (1).svg" alt="">
+              <div>
+                <p class="font-bold text-[14px]">Html 5</p>
+                <p class="text-[12px]">Estructuración de contenido web con buenas prácticas semánticas.</p>
+              </div>
+            </div>
+            <!-- CSS -->
+            <div class="flex border-black border-2 p-2 gap-2 rounded-lg">
+              <img class="w-10" src="img/css_old (1).svg" alt="">
+              <div class="text-[12px]">
+                <p class="font-bold text-[14px]">CSS 3</p>
+                <p>Diseño y estilización de interfaces con enfoques modernos.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- Mas sobre mi -->
+        <article class="bg-white p-6 rounded-lg">
+          <h1 class="font-bold text-[calc(1rem+2vw)] md:text-4xl">Mas sobre mi</h1>
+          <p class="my-4 text-[calc(.5rem+1vw)] md:text-[calc(.2rem+1vw)]">Mi meta es convertirme en un desarrollador altamente capacitado, capaz de crear aplicaciones innovadoras y funcionales. Siempre estoy abierto a nuevas oportunidades para aprender, colaborar y aportar valor a cada proyecto en el que participo.</p>
+        </article>
+        <!-- Mis Habilidades -->
+        <article class="bg-white p-6 rounded-lg">
+          <h1 class="font-bold text-[calc(1rem+2vw)] md:text-4xl">Habilidades</h1>
+          <p class="my-4 text-[calc(.5rem+1vw)] md:text-[calc(.2rem+1vw)]">Resolución de problemas y pensamiento lógico.
+            Aprendizaje autodidacta y capacidad de adaptación a nuevas tecnologías.
+            Organización y estructuración de código para mayor legibilidad.
+            Trabajo en equipo y comunicación efectiva.</p>
+        </article>
+      </section>
+      <!-- Seccion Proyectos -->
+      <section x-show="menu === 'proyectos'" class="grid md:grid md:grid-cols-2 xl:grid xl:grid-cols-3 my-4 gap-4">
+        <!-- proyecto1 -->
+        <article class="bg-white rounded-lg flex flex-col justify-between">
+          <img class="rounded-l-lg rounded-e-lg" src="img/Captura de pantalla 2025-02-05 203432.png" alt="">
+          <div class="px-6">
+            <div class="flex justify-between items-center">
+              <p class="font-bold text-[20px]">Página de Anuncio Interactiva</p>
+              <div class="flex items-center gap-2">
+                <img class="w-6" src="img/html5 (1).svg" alt="">
+                <img class="w-6" src="img/css_old (1).svg" alt="">
+              </div>
+            </div>
+            <p class="text-[15px] my-4">Diseñé y desarrollé una página web de anuncio con un enfoque minimalista y atractivo. Implementé efectos visuales y una estructura optimizada para garantizar una navegación fluida.</p>
+          </div>
+          <div class="flex justify-between p-6">
+            <p class="font-bold">27/01/25</p>
+            <div class="flex items-center gap-4">
+              <a href="https://angel03042.github.io/anuncio/"><img class="w-6 cursor-pointer" src="img/cloud-download.png" alt=""></a>
+              <a href="https://github.com/angel03042/anuncio.git"><img class="w-6 cursor-pointer" src="img/github.png" alt=""></a>
+            </div>
+          </div>
+        </article>
+        <!-- proyecto2 -->
+        <article class="bg-white rounded-lg flex flex-col justify-between">
+          <img class="rounded-l-lg rounded-e-lg" src="img/Captura de pantalla 2025-02-05 203602.png" alt="">
+          <div class="px-6">
+            <div class="flex justify-between items-center">
+              <p class="font-bold text-[20px]">Reproductor de Música</p>
+              <div class="flex items-center gap-2">
+                <img class="w-6" src="img/html5 (1).svg" alt="">
+                <img class="w-6" src="img/css_old (1).svg" alt="">
+                <img class="w-6" src="img/javascript (1).svg" alt="">
+              </div>
+            </div>
+            <p class="text-[15px] my-4">La interfaz es atractiva y responsiva, ofreciendo una experiencia fluida en diferentes dispositivos. Implementé funciones interactivas para mejorar la navegación y la reproducción de contenido musical.</p>
+          </div>
+          <div class="flex justify-between p-6">
+            <p class="font-bold">26/01/25</p>
+            <div class="flex items-center gap-4">
+              <a href="https://angel03042.github.io/Music/"><img class="w-6 cursor-pointer" src="img/cloud-download.png" alt=""></a>
+              <a href="https://github.com/angel03042/Music.git"><img class="w-6 cursor-pointer" src="img/github.png" alt=""></a>
+            </div>
+          </div>
+        </article>
+        <!-- proyecto3 -->
+        <article class="bg-white rounded-lg flex flex-col justify-between">
+          <img class="rounded-l-lg rounded-e-lg" src="img/Captura de pantalla 2025-02-05 203537.png" alt="">
+          <div class="px-6">
+            <div class="flex justify-between items-center">
+              <p class="font-bold text-[20px]">Inicio de Sesión Segura</p>
+              <div class="flex items-center gap-2">
+                <img class="w-6" src="img/html5 (1).svg" alt="">
+                <img class="w-6" src="img/css_old (1).svg" alt="">
+                <img class="w-6" src="img/javascript (1).svg" alt="">
+              </div>
+            </div>
+            <p class="text-[15px] my-4">Asegure una interfaz moderna y responsiva. Implementé validaciones para mejorar la experiencia del usuario y reforzar la seguridad. Este proyecto es una base para futuras autenticación en bases de datos.</p>
+          </div>
+          <div class="flex justify-between p-6">
+            <p class="font-bold">27/01/25</p>
+            <div class="flex items-center gap-4">
+              <a href="https://angel03042.github.io/login2/"><img class="w-6 cursor-pointer" src="img/cloud-download.png" alt=""></a>
+              <a href="https://github.com/angel03042/login2.git"><img class="w-6 cursor-pointer" src="img/github.png" alt=""></a>
+            </div>
+          </div>
+        </article>
+        <!-- proyecto4 -->
+        <article class="bg-white rounded-lg flex flex-col justify-between">
+          <img class="rounded-l-lg rounded-e-lg" src="img/Captura de pantalla 2025-02-05 203510.png" alt="">
+          <div class="px-6">
+            <div class="flex justify-between items-center">
+              <p class="font-bold text-[20px]">Interfaz de Inicio de Sesión</p>
+              <div class="flex items-center gap-2">
+                <img class="w-6" src="img/html5 (1).svg" alt="">
+                <img class="w-6" src="img/css_old (1).svg" alt="">
+                <img class="w-6" src="img/javascript (1).svg" alt="">
+              </div>
+            </div>
+            <p class="text-[15px] my-4">Implementé validaciones básicas para mejorar la experiencia del usuario y preparé la estructura para futuras integraciones con bases de datos y autenticación segura.</p>
+          </div>
+          <div class="flex justify-between p-6">
+            <p class="font-bold">27/01/25</p>
+            <div class="flex items-center gap-4">
+              <a href="https://angel03042.github.io/login1/"><img class="w-6 cursor-pointer" src="img/cloud-download.png" alt=""></a>
+              <a href="https://github.com/angel03042/login1.git"><img class="w-6 cursor-pointer" src="img/github.png" alt=""></a>
+            </div>
+          </div>
+        </article>
+        <!-- proyecto5 -->
+        <article class="bg-white rounded-lg flex flex-col justify-between">
+          <img class="rounded-l-lg rounded-e-lg" src="img/Captura de pantalla 2025-02-05 203631.png" alt="">
+          <div class="px-6 flex flex-col">
+            <div class="flex justify-between items-center">
+              <p class="font-bold text-[20px]">Galería Interactiva de Origami</p>
+              <div class="flex items-center gap-2">
+                <img class="w-6" src="img/html5 (1).svg" alt="">
+                <img class="w-6" src="img/css_old (1).svg" alt="">
+              </div>
+            </div>
+            <p class="text-[15px] my-4">La interfaz permite explorar diferentes diseños de origami de manera intuitiva, con efectos visuales que mejoran la navegación.</p>
+          </div>
+          <div class="flex justify-between p-6">
+            <p class="font-bold">27/01/25</p>
+            <div class="flex items-center gap-4">
+              <a href="https://angel03042.github.io/Origami/"><img class="w-6 cursor-pointer" src="img/cloud-download.png" alt=""></a>
+              <a href="https://github.com/angel03042/Origami.git"><img class="w-6 cursor-pointer" src="img/github.png" alt=""></a>
+            </div>
+          </div>
+        </article>
+        <!-- proyecto6 -->
+        <article class="bg-white rounded-lg flex flex-col justify-between">
+          <img class="rounded-l-lg rounded-e-lg" src="img/Captura de pantalla 2025-02-05 203726.png" alt="">
+          <div class="px-6">
+            <div class="flex justify-between items-center">
+              <p class="font-bold text-[20px]">Galería de Imágenes Interactiva</p>
+              <div class="flex items-center gap-2">
+                <img class="w-6" src="img/html5 (1).svg" alt="">
+                <img class="w-6" src="img/css_old (1).svg" alt="">
+                <img class="w-6" src="img/javascript (1).svg" alt="">
+              </div>
+            </div>
+            <p class="text-[15px] my-4">La interfaz es responsiva y permite una navegación fluida entre diferentes imágenes. Este proyecto puede adaptarse para incluir descargas, categorías o integración con una base de datos.</p>
+          </div>
+          <div class="flex justify-between items-center p-6">
+            <p class="font-bold">27/11/23</p>
+            <div class="flex items-center gap-4">
+              <a href="https://angel03042.github.io/wa_lpix/"><img class="w-6 cursor-pointer" src="img/cloud-download.png" alt=""></a>
+              <a href="https://github.com/angel03042/wa_lpix.git"><img class="w-6 cursor-pointer" src="img/github.png" alt=""></a>
+            </div>
+          </div>
+        </article>
+        <!-- Proyecto7 -->
+        <article class="bg-white rounded-lg flex flex-col justify-between">
+          <img class="rounded-l-lg rounded-e-lg" src="img/Captura de pantalla 2025-03-26 105847.png" alt="">
+          <div class="px-6">
+            <div class="flex justify-between items-center">
+              <p class="font-bold text-[20px]">Recetario interactivo</p>
+              <div class="flex items-center gap-2">
+                <img class="w-6" src="img/html5 (1).svg" alt="">
+                <img class="w-6" src="img/css_old (1).svg" alt="">
+                <img class="w-6" src="img/javascript (1).svg" alt="">
+              </div>
+            </div>
+            <p class="text-[15px] my-4">Este recetario te permite crear, mostrar, eliminar y actualizar las recetas, con un diseño limpio y facil de entender, el cual tambien cuenta con un formulario para validar los datos del usuario.</p>
+          </div>
+          <div class="flex justify-between items-center p-6">
+            <p class="font-bold">25/03/25</p>
+            <div class="flex items-center gap-4">
+              <a href="https://recetapp03.netlify.app/"><img class="w-6 cursor-pointer" src="img/cloud-download.png" alt=""></a>
+              <a href="https://github.com/angel03042/recetario.git"><img class="w-6 cursor-pointer" src="img/github.png" alt=""></a>
+            </div>
+          </div>
+        </article>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
